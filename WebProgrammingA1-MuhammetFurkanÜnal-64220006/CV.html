@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammet Furkan Ünal CV</title>
+
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 0.98em;
+    }
+
+    html {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      background:linear-gradient(to right bottom ,rgb(230, 207, 177), rgb(222, 206, 185),rgb(210, 208, 208), rgb(220, 203, 180), rgb(238, 219, 194));
+    }
+
+    #div_mainPage {
+      display: flex;
+      border-left: rgba(0, 0, 0, 0.652) 3px solid;
+      border-right: rgba(0, 0, 0, 0.652) 3px solid;
+      
+      width: 55%;
+    }    
+
+    .div_innerhalf {
+      border: 1px black solid;
+      flex-direction: column;
+      padding: 10px;
+      background-color:rgba(255, 132, 0, 0.394);
+      display: flex;
+      
+    
+    }
+
+  </style>
+
+
+
+</head>
+<body>
+  
+  <div id="div_mainPage">
+    <div class="div_innerhalf" style="background-color: chocolate;">
+    
+        <img src="myPhoto.jpg" style="width:260px; border: 1px solid black; border-radius: 3px; align-self: center;">
+        <br><br>
+        <h1 style="font-size: 1.8em;">Contact</h1> <br>
+        <span><b style="margin-right: 4px;">Email:</b>muhammet.unal3@std.medipol.edu.tr</span>
+        <span><b>Phone Number: </b>0553 505 2802</span>
+        <br><hr><br>
+        <span>
+          <b>Programming Languages:</b>
+          <div style="display: flex;">
+            <div>
+              <ul style="list-style-type:disc; margin-left: 20px;">
+                <li>Java: </li>
+                <li>Python: </li>
+                <li>C: </li>
+                <li>Javascript: </li>
+                <li>C#: </li>
+              </ul>
+            </div>
+
+            <div style="margin-left: 10px;">
+              <ul style="list-style-type: none;">
+                <li id="li-java"></li>
+                <li id="li-python"></li>
+                <li id="li-c"></li>
+                <li id="li-js"></li>
+                <li id="li-c#"></li>
+              </ul>
+            </div>
+            
+          </div>
+        </span>
+        <br><hr><br>
+        <h2>Language</h2>
+        <span>
+          <ul style="margin-left: 20px;">
+            <li>Turkish</li>
+            <li>English</li>
+            <li>Arabic</li>
+          </ul>
+        </span>
+    
+    </div>
+
+
+    <div class="div_innerhalf" style="width: 100%; align-items: center; padding: 20px;">
+    
+      <br>
+      <h1 style="font-size: 2em;">Muhammet Furkan Ünal</h1>
+      <span style="font-size: 1.3em;">Computer Scientist</span>
+      <span>Undergraduate Student in Istanbul Medipol University</span>
+      <br>
+      <h1 style="font-size: 1.8em;">Summary</h1>
+      <br>
+      <p style="font-size: 1.1em;">I am Muhammet Furkan Ünal, i am waiting for a suitable job for me, i hope my employer is going to be you!</p>
+      <br><br>
+      <h1 style="font-size: 1.8em;">Experience and Skills</h1>
+      <br>
+      <p style="font-size: 1.2em;">Istanbul Medipol University - Student</p>
+      <p>From 2022 - to 2026</p>
+      <br>
+      <ul>
+        <li>Computer Engineering 2nd Year - Undergraduate student</li>
+        <li>2022-2023 year department degree scholarship</li>
+        <li>2023-2024 year Fall semester Intro to COE-EEE TAship</li>
+        <li>2023-2024 year Spring semester Advanced Programming TAship</li>
+        <li>Intermediate level knowledge in Python data science libraries</li>
+        <li>Intermediate level knowledge in web development technologies</li>
+        <li>Good problem solving skills</li>
+      </ul>
+      <br>
+      <h1 style="font-size: 1.8em;">Projects</h1>
+      <br>
+      <ul style="margin-left: 30px;">
+        <li>Online Shopping Project -- Built with vanilla JS and Python</li>
+        <li>Autonomous Whatsapp Bot Project -- Built with Electron.js and Python Selenium</li>
+      </ul>
+      
+    
+    </div>
+
+
+
+  </div>
+  
+  <script>
+
+    const li_java = document.getElementById("li-java");
+    const li_python = document.getElementById("li-python");
+    const li_c = document.getElementById("li-c");
+    const li_js = document.getElementById("li-js");
+    const li_csp = document.getElementById("li-c#");
+
+    const star = "★";
+    const emptar = "☆";
+
+    let appendNTimes = (times, element, str) => {
+      for (let i=0; i<times; i++) {
+        element.innerHTML += str;
+      }
+    };
+
+    langList = [li_java,li_python,li_c,li_js,li_csp];
+    langLevels = [3, 5, 2, 5, 2] // levels are x/10
+    for (let i=0; i<langList.length; i++) {
+      appendNTimes(langLevels[i], langList[i], star);
+      appendNTimes(10-langLevels[i], langList[i], emptar);
+    }
+
+
+
+  </script>
+</body>
+</html>
